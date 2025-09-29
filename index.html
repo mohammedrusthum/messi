@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For YAZHINI — with lots of ♡</title>
+  <meta name="description" content="A tiny, adorable one-page site celebrating YAZHINI." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bubble: {
+              pink: '#ffd1dc',
+              blue: '#cbe7ff',
+              lavender: '#e6dbff',
+              mint: '#d6f5e5',
+              cream: '#fff7f9'
+            }
+          },
+          fontFamily: {
+            rounded: ['Nunito', 'ui-rounded', 'system-ui', 'Arial', 'sans-serif'],
+            hand: ['"Cute Font"', '"Patrick Hand"', 'cursive']
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            floatSlow: 'float 10s ease-in-out infinite',
+            bounceSoft: 'bounceSoft 2.2s ease-in-out infinite',
+            sparkle: 'sparkle 1.2s ease-in-out both'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-14px)' }
+            },
+            bounceSoft: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-4px)' }
+            },
+            sparkle: {
+              '0%': { opacity: '0', transform: 'scale(0.6) rotate(0deg)' },
+              '50%': { opacity: '1', transform: 'scale(1.05) rotate(12deg)' },
+              '100%': { opacity: '0.9', transform: 'scale(1) rotate(0deg)' }
+            }
+          },
+          boxShadow: {
+            soft: '0 8px 32px rgba(255, 182, 193, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Nunito:wght@400;700;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    /* subtle pastel gradient background */
+    .pastel-bg { background: radial-gradient(1200px 800px at 20% 10%, #fff0f5 0%, rgba(255,240,245,0) 60%), radial-gradient(900px 700px at 80% 20%, #e6f7ff 0%, rgba(230,247,255,0) 60%), radial-gradient(1000px 800px at 50% 90%, #f0fff6 0%, rgba(240,255,246,0) 60%); }
+    /* heart float paths (slight left-right) */
+    .float-x { animation: floatX 8s ease-in-out infinite; }
+    @keyframes floatX { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(12px); } }
+  </style>
+</head>
+<body class="min-h-screen pastel-bg font-rounded text-slate-700 selection:bg-bubble-pink selection:text-pink-700">
+  <!-- Floating decorative hearts and stars -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="absolute left-6 top-10 animate-float text-pink-400/70 text-4xl">♡</div>
+    <div class="absolute left-16 top-48 animate-floatSlow float-x text-pink-300/80 text-3xl">❤︎</div>
+    <div class="absolute right-10 top-24 animate-float text-indigo-300/80 text-3xl">✦</div>
+    <div class="absolute right-24 bottom-32 animate-floatSlow text-sky-300/80 text-3xl">✧</div>
+    <div class="absolute left-1/2 bottom-10 -translate-x-1/2 animate-float text-rose-300/70 text-4xl">♡</div>
+  </div>
+
+  <!-- Site container -->
+  <main class="relative mx-auto max-w-5xl px-5 sm:px-8">
+    <!-- NAV / Title -->
+    <header class="flex items-center justify-between py-6">
+      <h1 class="font-hand text-3xl sm:text-4xl text-pink-500">for YAZHINI ♡</h1>
+      <a href="#contact" class="rounded-full bg-pink-400/90 px-5 py-2 text-white shadow-soft hover:bg-pink-400 active:scale-[0.98] transition transform duration-200 ease-out animate-bounceSoft">Send love 💌</a>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="relative grid gap-8 sm:grid-cols-2 items-center py-10 sm:py-16">
+      <div>
+        <h2 class="font-hand text-5xl sm:text-6xl leading-tight text-pink-600 drop-shadow-[0_2px_0_rgba(255,255,255,1)]">HIIIIIIIIIII, BABGURLL 🤍</h2>
+        <p class="mt-4 text-lg sm:text-xl text-rose-600/90">MYYY BABYGURLL · The sweetest person ever ✨</p>
+        <div class="mt-6 flex gap-3 text-2xl" aria-hidden="true">
+          <span class="animate-sparkle">✨</span>
+          <span class="animate-sparkle [animation-delay:200ms]">🌸</span>
+          <span class="animate-sparkle [animation-delay:400ms]">⭐</span>
+          <span class="animate-sparkle [animation-delay:600ms]">🎀</span>
+        </div>
+      </div>
+      <!-- Cute placeholder illustration card -->
+      <div class="relative">
+        <div class="rounded-3xl bg-white/70 backdrop-blur shadow-soft p-6 sm:p-8 border border-pink-100">
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-bubble-pink via-bubble-lavender to-bubble-blue flex items-center justify-center text-6xl">
+            <span class="animate-float">(˘︶˘).｡*♡</span>
+          </div>
+          <p class="mt-3 text-center text-sm text-rose-500">Swap with a favorite cute pic or illustration later ✨</p>
+        </div>
+        <!-- floating hearts around image -->
+        <div class="absolute -right-3 -top-3 text-3xl text-pink-400 animate-float">♡</div>
+        <div class="absolute -left-4 bottom-2 text-2xl text-rose-300 animate-floatSlow float-x">❤︎</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-10 sm:py-16">
+      <div class="rounded-3xl bg-white/70 backdrop-blur border border-pink-100 p-6 sm:p-10">
+        <h3 class="font-hand text-4xl text-pink-600 mb-4">About YAZHINI ✿</h3>
+        <p class="text-rose-700/90 leading-relaxed">
+          YAZHINI is sunshine in human form — kind, joyful, and endlessly thoughtful. She loves making people smile, finding cozy cafes, and collecting tiny moments that feel like magic.
+        </p>
+        <ul class="mt-5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-rose-600">
+          <li class="flex items-center gap-2"><span>🌸</span><span>Flower lover</span></li>
+          <li class="flex items-center gap-2"><span>🎶</span><span>Music vibes</span></li>
+          <li class="flex items-center gap-2"><span>📚</span><span>Book cuddler</span></li>
+          <li class="flex items-center gap-2"><span>🎮</span><span>Cozy gamer</span></li>
+        </ul>
+        <p class="mt-4 text-sm text-rose-500">Replace the paragraph and hobbies with [BIO/HOBBIES] when ready.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="py-10 sm:py-16">
+      <h3 class="font-hand text-4xl text-pink-600 mb-6">Sweet Gallery ✧</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <!-- Photo cards -->
+        <div class="group relative">
+          <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-bubble-lavender to-bubble-pink border border-pink-100 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.6),transparent_40%)]"></div>
+          </div>
+          <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div class="absolute right-2 top-2 text-xl animate-sparkle">✨</div>
+            <div class="absolute left-2 bottom-3 text-xl [animation-delay:200ms] animate-sparkle">✦</div>
+          </div>
+        </div>
+        <div class="group relative">
+          <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-bubble-mint to-bubble-blue border border-pink-100 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_60%_40%,rgba(255,255,255,0.6),transparent_40%)]"></div>
+          </div>
+          <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div class="absolute right-2 top-2 text-xl animate-sparkle">✨</div>
+            <div class="absolute left-2 bottom-3 text-xl [animation-delay:200ms] animate-sparkle">✦</div>
+          </div>
+        </div>
+        <div class="group relative">
+          <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-bubble-blue to-bubble-lavender border border-pink-100 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,rgba(255,255,255,0.6),transparent_40%)]"></div>
+          </div>
+          <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div class="absolute right-2 top-2 text-xl animate-sparkle">✨</div>
+            <div class="absolute left-2 bottom-3 text-xl [animation-delay:200ms] animate-sparkle">✦</div>
+          </div>
+        </div>
+        <div class="group relative">
+          <div class="aspect-[4/5] rounded-2xl bg-gradient-to-br from-bubble-pink to-bubble-mint border border-pink-100 overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.6),transparent_40%)]"></div>
+          </div>
+          <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300">
+            <div class="absolute right-2 top-2 text-xl animate-sparkle">✨</div>
+            <div class="absolute left-2 bottom-3 text-xl [animation-delay:200ms] animate-sparkle">✦</div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3 text-sm text-rose-500">Replace each gradient card with a real photo by setting a background-image or inserting an <img>.</p>
+    </section>
+
+    <!-- FUN FACTS -->
+    <section id="facts" class="py-10 sm:py-16">
+      <h3 class="font-hand text-4xl text-pink-600 mb-6">Did you know? 💫</h3>
+      <div class="grid gap-4 sm:grid-cols-3">
+        <article class="rounded-2xl bg-white/70 border border-pink-100 p-5 shadow-soft hover:shadow-pink-200/40 transition">
+          <h4 class="font-hand text-2xl text-rose-600 mb-2">Little Fact ①</h4>
+          <p class="text-rose-700/90">[YAZHINII] loves coffee more than anything ☕</p>
+        </article>
+        <article class="rounded-2xl bg-white/70 border border-pink-100 p-5 shadow-soft hover:shadow-pink-200/40 transition">
+          <h4 class="font-hand text-2xl text-rose-600 mb-2">Little Fact ②</h4>
+          <p class="text-rose-700/90">Her laugh could power a thousand stars ✨</p>
+        </article>
+        <article class="rounded-2xl bg-white/70 border border-pink-100 p-5 shadow-soft hover:shadow-pink-200/40 transition">
+          <h4 class="font-hand text-2xl text-rose-600 mb-2">Little Fact ③</h4>
+          <p class="text-rose-700/90">She’s the CEO of giving the best hugs 🧸</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- MESSAGE -->
+    <section id="message" class="py-10 sm:py-16">
+      <div class="rounded-3xl bg-gradient-to-br from-bubble-pink to-bubble-lavender p-6 sm:p-10 border border-pink-100 text-center shadow-soft">
+        <p class="font-hand text-3xl sm:text-4xl text-rose-700 drop-shadow-[0_2px_0_rgba(255,255,255,1)]">Thanks for being the best friend ever 🎀✨</p>
+        <p class="mt-3 text-rose-700/90">You make the little moments glow. This page is a tiny hug!</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-10 sm:py-16">
+      <div class="flex flex-col items-center gap-4">
+        <a href="mailto:example@love.com?subject=Sending%20love%20to%20YAZHINI" class="rounded-full bg-pink-500 px-8 py-3 text-white font-bold shadow-soft hover:bg-pink-400 active:scale-[0.98] transition transform duration-200 animate-bounceSoft">Send love 💌</a>
+        <p class="text-sm text-rose-500">Change the email address and subject to your own.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 text-center text-rose-500 text-sm">
+      Made with lots of ♡ and sparkles for <span class="text-rose-600 font-bold">YAZHINI</span> · Replace any [brackets] with your own words.
+    </footer>
+  </main>
+
+  <!-- Optional: light confetti burst on load -->
+  <script>
+    // Simple confetti using emojis for a cute vibe
+    (function confettiBurst(){
+      const container = document.createElement('div');
+      container.setAttribute('aria-hidden', 'true');
+      container.className = 'pointer-events-none fixed inset-0 overflow-hidden';
+      document.body.appendChild(container);
+
+      const pieces = Array.from({ length: 18 });
+      const glyphs = ['✨','💖','💫','⭐','🎀','🌸'];
+      pieces.forEach((_, i) => {
+        const span = document.createElement('span');
+        span.textContent = glyphs[Math.floor(Math.random()*glyphs.length)];
+        const startLeft = Math.random()*100;
+        const duration = 1200 + Math.random()*800;
+        span.style.position = 'absolute';
+        span.style.left = startLeft + 'vw';
+        span.style.top = '-10px';
+        span.style.fontSize = (18 + Math.random()*16) + 'px';
+        span.style.transition = `transform ${duration}ms ease-out, opacity ${duration}ms ease-out`;
+        span.style.transform = `translateY(${window.innerHeight + 40}px) rotate(${(Math.random()*60-30)}deg)`;
+        span.style.opacity = '0';
+        container.appendChild(span);
+        requestAnimationFrame(() => {
+          span.style.opacity = '1';
+          span.style.transform = `translateY(${window.innerHeight - 30}px) rotate(${(Math.random()*60-30)}deg)`;
+          setTimeout(() => {
+            span.style.opacity = '0';
+            setTimeout(() => span.remove(), 300);
+          }, duration - 200);
+        });
+      });
+      setTimeout(() => container.remove(), 2200);
+    })();
+  </script>
+
+  <!-- How to customize: quick hints -->
+  <section aria-hidden="true" class="fixed bottom-3 left-1/2 -translate-x-1/2 text-xs bg-white/80 border border-pink-100 rounded-full px-4 py-2 text-rose-500 shadow-soft">
+    Edit headings, [BIO/HOBBIES], fun facts, and replace gallery with images.
+  </section>
+</body>
+</html>
+
